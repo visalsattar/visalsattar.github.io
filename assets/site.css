@@ -148,7 +148,8 @@ h1,h2,h3{font-family:var(--f-display);line-height:1.15;text-wrap:balance;margin:
 /* contact */
 .contact{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
 .email{display:flex;align-items:center;gap:10px;background:var(--panel);border:1px solid var(--line);padding:10px 10px 10px 16px;font:500 15px/1 var(--f-mono);min-width:0;max-width:100%}
-.email span{user-select:all;overflow-wrap:anywhere}
+.email a{display:inline-block;padding-block:5px;color:var(--fg);text-decoration:none;user-select:all;overflow-wrap:anywhere}
+.email a:hover{color:var(--cyan);text-decoration:underline}
 .email button{font:600 12px/1 var(--f-mono);color:var(--bg);background:var(--cyan);border:0;padding:9px 12px;cursor:pointer}
 .links{display:flex;gap:12px;flex-wrap:wrap}
 .foot{padding-block:28px;border-top:1px solid var(--line);font:400 12px/1.6 var(--f-mono);color:var(--dim)}
