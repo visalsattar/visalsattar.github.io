@@ -107,7 +107,7 @@
             <div class="fact"><span class="n">&lt;1 s</span><p><strong>Rate rule</strong> I added after the models missed a real flood from my phone.</p></div>
             <div class="fact"><span class="n">222</span><p><strong>pytest tests</strong> covering preprocessing, train/test leakage, fusion logic, route security and blocking.</p></div>
           </div>
-          <div class="limits"><b>Not done yet</b>No end-to-end latency measurement from capture to browser. The models don't catch attack types they weren't trained on, and unconfirmed anomaly alerts are capped at MEDIUM so they can't trigger blocking.</div>
+          <div class="limits"><b>Known limits</b>Latency is measured only from Redis to the dashboard (2.5 ms median), not end to end from capture to browser. The models only recognise attack types they were trained on; that's why the rate rule exists. By design, unconfirmed anomaly alerts are capped at MEDIUM so a guess can never trigger blocking.</div>
           <div class="stack"><span>Python</span><span>Scapy</span><span>scikit-learn</span><span>TensorFlow</span><span>Flask</span><span>Redis Streams</span><span>React</span><span>Docker Compose</span></div>
           <p class="code-link"><a class="mono" href="https://github.com/visalsattar/AI-Based-Intrusion-Detection-System-for-Real-Time-Threat-Detection" target="_blank" rel="noopener">Read the code ↗</a></p>
         </div>
@@ -208,10 +208,10 @@
       <div class="sec-head">
         <div class="label">Get in touch</div>
         <h2>Contact</h2>
-        <p>Open to entry-level security and IT roles in Pakistan, remote, or abroad. Found the flag? Email it to me.</p>
+        <p>Based in Peshawar. Open to entry-level security and IT roles: on-site in Pakistan, remote, or relocating abroad. Found the flag? Email it to me.</p>
       </div>
       <div class="contact">
-        <div class="email"><span id="mail">visalsattar.dev@gmail.com</span><button type="button" id="copyMail">Copy</button></div>
+        <div class="email"><a id="mail" href="mailto:visalsattar.dev@gmail.com">visalsattar.dev@gmail.com</a><button type="button" id="copyMail">Copy</button></div>
         <div class="links">
           <a class="btn ghost" href="https://github.com/visalsattar" target="_blank" rel="noopener">GitHub ↗</a>
           <a class="btn ghost" href="https://linkedin.com/in/visalsattar" target="_blank" rel="noopener">LinkedIn ↗</a>
