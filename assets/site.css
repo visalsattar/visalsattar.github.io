@@ -103,6 +103,10 @@ h1,h2,h3{font-family:var(--f-display);line-height:1.15;text-wrap:balance;margin:
 .node.miss{border-color:var(--dim);color:var(--dim)}
 .node.miss b::after{content:" · no alert";color:var(--dim);font-weight:500}
 .det{display:flex;flex-direction:column;gap:8px}
+/* 3D view (assets/ids3d.js) sits on top of the 2D pipeline, which stays in the DOM (transparent, same size) for screen readers */
+.pipe-wrap{position:relative}
+.ids3d{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.pipe-wrap.is-3d .pipe{opacity:0}
 .log{margin-top:20px;background:var(--bg);border:1px solid var(--line);padding:12px 14px;height:178px;overflow-y:auto;font:400 12.5px/1.65 var(--f-mono);color:var(--muted)}
 .log .t{color:var(--dim)}.log .hit{color:var(--alert)}.log .ok{color:var(--ok)}.log .w{color:var(--warn)}
 .facts{display:flex;flex-direction:column;gap:0}
