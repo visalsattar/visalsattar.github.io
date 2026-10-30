@@ -93,6 +93,19 @@ function play(key, btn){
 btns[0].addEventListener("click", () => play("replay", btns[0]));
 btns[1].addEventListener("click", () => play("flood", btns[1]));
 
+// 3D view: fetched only after the page has loaded and the pipeline scrolls into view.
+// ids3d.js reads the classes play() sets on the nodes above, so it has no scenario logic of its own.
+addEventListener("load", () => {
+  const wrap = $(".pipe-wrap");
+  if (!wrap || !("IntersectionObserver" in window)) return;
+  const io = new IntersectionObserver(es => {
+    if (!es.some(e => e.isIntersecting)) return;
+    io.disconnect();
+    const s = document.createElement("script"); s.src = "/assets/ids3d.js"; document.body.appendChild(s);
+  });
+  io.observe(wrap);
+});
+
 /* ---------- copy email ---------- */
 $("#copyMail").addEventListener("click", async e => {
   const b = e.currentTarget;
